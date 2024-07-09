@@ -27,7 +27,6 @@ Bibliotecas: Servem para evitar repetição de código e tornar o desenvolviment
 Criação de bibliotecas com XControl:
 	- botao direito xcontrol -> inserir xcontrol em -> Nova biblioteca -> Escolher a pasta onde sera salva
 	a biblioteca -> Podemos renomear o xcontrol para exaustor por exemplo.
-	
 	- O objetivo de uma biblioteca é ter um objeto de modelo que pode ser replicado em varias telas.
 	- Botao direito em bibliotecas -> registrar bibliotecas carregadas.
 	- Um xcontrol representa uma classe, cada objeto inserido é uma nova instancia da classe.
