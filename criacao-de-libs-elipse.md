@@ -1,4 +1,4 @@
-links video-aulas do canal elipse:
+## Links video-aulas do canal elipse:
 
  - https://www.youtube.com/watch?v=wvXCEN5iaAg&list=PLoCAWpTf0fzXG8MQVpvq_5jf0b7L1zk05&index=32
  - https://www.youtube.com/watch?v=8YIBB7s9rYM&list=PLoCAWpTf0fzXG8MQVpvq_5jf0b7L1zk05&index=55
@@ -11,10 +11,11 @@ links video-aulas do canal elipse:
 
 Instalar Modbus simulator demo e fieldlogger
 
+As bibliotecas auxiliam o desenvolvimento de projetos antes demorados e complexos a se tornarem simples e rápidos,
+evitando a repetição de telas e objetos. Estas bibliotecas são também utilizadas para otimizar o tempo 
+de manutenção da aplicação.
 
-As bibliotecas auxiliam o desenvolvimento de projetos antes demorados e complexos a se tornarem simples e rápidos, evitando a repetição de telas e objetos. Estas bibliotecas são também utilizadas para otimizar o tempo de manutenção da aplicação.
-
-Conteúdo:
+## Conteúdo:
 
 • XControls
 • XObjects
@@ -24,7 +25,7 @@ Conteúdo:
 
 Bibliotecas: Servem para evitar repetição de código e tornar o desenvolvimento mais rapido.
 
-Criação de bibliotecas com XControl:
+## Criação de bibliotecas com XControl:
 	- botao direito xcontrol -> inserir xcontrol em -> Nova biblioteca -> Escolher a pasta onde sera salva
 	a biblioteca -> Podemos renomear o xcontrol para exaustor por exemplo.
 	- O objetivo de uma biblioteca é ter um objeto de modelo que pode ser replicado em varias telas.
@@ -44,7 +45,7 @@ Criação de bibliotecas com XControl:
 	que recebera um valor do tipo double.
 	- A propriedade nativa period determina a velocidade, pois ela determina o periodo do ponto inicial ate o ponto final.
 	
-	xObjects: 
+## xObjects: 
 	- São responsaveis por toda a parte de dados do objeto de referencia, isso avita de ficar criando tag para cada xcontrol 
 	que for instanciado.
 	- É necessario passar as informações da tag criada para o exaustor deixando tudo dentro da biblioteca, para passar 
@@ -62,15 +63,15 @@ Criação de bibliotecas com XControl:
 	- Para associar o xControl com o xObject é necessario criar variavel para receber o path.
 	- O E3 também trabalha com programação baseada em eventos.
 
-Tela indexada: 
+## Tela indexada: 
   - Uma tela indexada é uma única tela que pode mostrar dados de varios equipamentos.
   - Um botão de liga e desliga deve ser bidirecional.
   - A fonte devemos deixar sempre dinamica.
  
- Método doModal:
+ ## Método doModal:
   - xControl
  
- ModBus:
+ ## ModBus:
  - Serve para simular CLP conectados em uma rede.
  - Tipo IOTAG serve para dizer que esta esperando uma tag.
  - Uma propriedade pode receber um objeto inteiro ao invés de uma única propriedade.
