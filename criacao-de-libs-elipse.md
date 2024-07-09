@@ -17,11 +17,11 @@ de manutenção da aplicação.
 
 ## Conteúdo:
 
-• XControls
-• XObjects
-• Evento CustomConfig
-• Tela Indexada
-• Tipos não-convencionais para propriedades de XControls e XObjects
+- XControls
+- XObjects
+- Evento CustomConfig
+- Tela Indexada
+- Tipos não-convencionais para propriedades de XControls e XObjects
 
 Bibliotecas: Servem para evitar repetição de código e tornar o desenvolvimento mais rapido.
 
