@@ -45,7 +45,7 @@ que for instanciado (referenciado) em alguma tela.
 que recebera um valor do tipo double.
 - A propriedade nativa period determina a velocidade, pois ela determina o periodo do ponto inicial ate o ponto final.
 	
-## xObjects: 
+## XObjects: 
 - São responsaveis por toda a parte de dados do objeto de referencia, isso avita de ficar criando tag para cada xcontrol 
 que for instanciado.
 - É necessario passar as informações da tag criada para o exaustor deixando tudo dentro da biblioteca, para passar 
@@ -62,6 +62,15 @@ de um componente.
 - O E3 não permite objetos com o mesmo nome contido no mesmo caminho.
 - Para associar o xControl com o xObject é necessario criar variavel para receber o path.
 - O E3 também trabalha com programação baseada em eventos.
+
+## Diferenças principais entre XControl e XObject:
+- Natureza: XControl é focado na criação de interfaces gráficas customizadas e na lógica de controle associada, enquanto XObject é mais genérico, utilizado para representar e manipular dados e configurações.
+
+- Desenvolvimento: XControl requer habilidades de programação para desenvolver funcionalidades customizadas, enquanto XObject pode ser configurado através da interface gráfica do Elipse E3, além de suportar alguma programação em scripts.
+
+- Uso: XControl é usado principalmente para criar interfaces de usuário interativas e visualmente ricas, enquanto XObject é utilizado para configurar e manipular dados e comportamentos dentro do sistema SCADA.
+
+- Essas diferenças refletem a especialização e os propósitos distintos desses conceitos dentro do ambiente de desenvolvimento do Elipse E3 para aplicações SCADA.
 
 ## Tela indexada: 
   - Uma tela indexada é uma única tela que pode mostrar dados de varios equipamentos.
