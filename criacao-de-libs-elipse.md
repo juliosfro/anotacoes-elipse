@@ -89,3 +89,39 @@ de um componente.
  - Para que haja a comunicação com os CLPS é necessário que seja instalado o driver apropriado.
  - Diagrama de associações: xObject -> xControl -> Tag
  - Toda vez que uma lib for alterada é necessário registrar ela.
+
+ ## Criacao e vinculos entre XObject e XControl
+
+ 1 - Criar um componente do tipo XControl chamado de XCMotor
+1.1 - Adicionar um motor dentro do XControl criado
+1.2 - Criar um XObject chamado XOMotor com as propriedades: Temperatura do tipo Decimal e Estado do tipo Boolean
+1.3 - Criar uma propriedade para XCMotor chamada de Fonte do tipo XOMotor
+1.4 - Na propriedade OverrideFillColor do motor adicionado criar uma conexao do tipo digital
+definindo as cores para o status ligado: 0, 255, 0 e desligado: 255, 0, 0 pegando os valores de XCMotor.Fonte.Estado
+1.5 - Em Objetos de servidor -> Objetos de dados -> Dados -> Inserir o XOMotor criado
+1.6 - Nas propriedades do XOMotor instanciado em Objetos de servidor ir em associações e pegar os valores das tags correspondentes 
+para Temperatura e Estado.
+
+- Um XControl pode ter uma unica propriedade chamada Fonte do tipo XObject que foi criado para o XControl
+
+- As associações de fonte de dados de origem, por exemplo de um CLP podem ser atribuídas para um XObject quando ele eh 
+instanciado em Objetos de dados.
+
+- No XControl as propriedades podem vir dele mesmo, exemplo: XCMotor.Fonte.Estado, as propriedades sempre
+apontam para o proprio XControl atual + Fonte (poderia ser outro nome) +  propriedade do XObject.
+
+Exemplo de passagem de propriedade de uma tela para outra:
+
+```vbscript
+Sub Motor_Click()
+	Arg = XCMotor.Fonte.PathName
+	Application.DoModal "TelaComandos", "Comando", , , , , Arg, 1 + 2 + 64 + 2048
+End Sub
+```
+
+Symbol Factory 3 - Instalação
+
+https://www.youtube.com/watch?v=9RxQt_pEoFI&list=PLVHMuBlUUtCNOfPWCTzmEdakPpleRpY5g&index=4&t=1s
+
+O Elipse suporta imagens do tipo vetor em formato Metafile (wmf), essas imagens podem ter suas propriedades alteradas
+em tempo de execução.
