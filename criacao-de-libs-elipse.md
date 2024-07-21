@@ -119,8 +119,8 @@ chamar a tela de comandos passando os parametros.
 
 ```vbscript
 Sub Motor_Click()
-	Arg = XCMotor.Fonte.PathName
-	Application.DoModal "TelaComandos", "Comando", , , , , Arg, 1 + 2 + 64 + 2048
+ Arg = XCMotor.Fonte.PathName
+ Application.DoModal "TelaComandos", "Comando", , , , , Arg, 1 + 2 + 64 + 2048
 End Sub
 ```
 
