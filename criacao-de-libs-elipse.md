@@ -92,20 +92,24 @@ de um componente.
 
  ## Criacao e vinculos entre XObject e XControl
 
-- Criar um componente do tipo XControl chamado de XCMotor
-- Adicionar um motor dentro do XControl criado
-- Criar um XObject chamado XOMotor com as propriedades: Temperatura do tipo Decimal e Estado do tipo Boolean
-- Criar uma propriedade para XCMotor chamada de Fonte do tipo XOMotor
+Exemplo basico de criacao de um componente XControl associado a um XCbject:
+
+- Criar um componente do tipo XControl chamado de XCMotor.
+- Adicionar um motor dentro do XControl criado.
+- Criar um XObject chamado XOMotor com as propriedades: Temperatura do tipo Decimal e Estado do tipo Boolean.
+- Criar uma propriedade para XCMotor chamada de Fonte do tipo XOMotor.
 - Na propriedade OverrideFillColor do motor adicionado criar uma conexao do tipo digital
 definindo as cores para o status ligado: 0, 255, 0 e desligado: 255, 0, 0 pegando os valores de XCMotor.Fonte.Estado
-- Em Objetos de servidor -> Objetos de dados -> Dados -> Inserir o XOMotor criado
+- Em Objetos de servidor -> Objetos de dados -> Dados -> Inserir o XOMotor criado.
 - Nas propriedades do XOMotor instanciado em Objetos de servidor ir em associações e pegar os valores das tags correspondentes 
 para Temperatura e Estado.
 
-Um XControl pode ter uma unica propriedade chamada Fonte do tipo XObject que foi criado para o XControl
-As associações de fonte de dados de origem, por exemplo de um CLP podem ser atribuídas para um XObject quando ele eh 
+Explicacoes:
+
+- Um XControl pode ter uma unica propriedade chamada Fonte do tipo XObject que foi criado para o XControl
+- As associações de fonte de dados de origem, por exemplo de um CLP podem ser atribuídas para um XObject quando ele eh 
 instanciado em Objetos de dados.
-No XControl as propriedades podem vir dele mesmo, exemplo: XCMotor.Fonte.Estado, as propriedades sempre
+- No XControl as propriedades podem vir dele mesmo, exemplo: XCMotor.Fonte.Estado, as propriedades sempre
 apontam para o proprio XControl atual + Fonte (poderia ser outro nome) +  propriedade do XObject.
 
 ## Exemplo de passagem de propriedade de uma tela para outra:
