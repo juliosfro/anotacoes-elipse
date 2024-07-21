@@ -92,7 +92,7 @@ de um componente.
 
  ## Criacao e vinculos entre XObject e XControl
 
-Exemplo basico de criacao de um componente XControl associado a um XCbject:
+Exemplo basico de criacao de um componente XControl associado a um XObject:
 
 - Criar um componente do tipo XControl chamado de XCMotor.
 - Adicionar um motor dentro do XControl criado.
