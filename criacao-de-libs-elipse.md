@@ -114,10 +114,22 @@ apontam para o proprio XControl atual + Fonte (poderia ser outro nome) +  propri
 
 ## Exemplo de passagem de propriedade de uma tela para outra:
 
+No evento de Click do motor adicionado no XControl inserir esse codigo para pegar os parametros do objeto clicado e 
+chamar a tela de comandos passando os parametros.
+
 ```vbscript
 Sub Motor_Click()
 	Arg = XCMotor.Fonte.PathName
 	Application.DoModal "TelaComandos", "Comando", , , , , Arg, 1 + 2 + 64 + 2048
+End Sub
+```
+
+No evento OnPreShow da tela de comandos criada para as acoes do motor usar esse codigo para receber os parametros.
+
+```vbscript
+Sub TelaComandos_OnPreShow(Arg)
+ Item("XCComandosMotor").Fonte = Arg
+ Caption = Item("XCComandosMotor").Fonte.Name
 End Sub
 ```
 
