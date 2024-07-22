@@ -139,3 +139,15 @@ https://www.youtube.com/watch?v=9RxQt_pEoFI&list=PLVHMuBlUUtCNOfPWCTzmEdakPpleRp
 
 O Elipse suporta imagens do tipo vetor em formato Metafile (wmf), essas imagens podem ter suas propriedades alteradas
 em tempo de execução.
+
+## Criacao do login e acesso as informacoes do usuario
+
+```vbscript
+Sub TelaMenus_OnPreShow(Arg)
+ Application.Login()	
+ Application.GetObject("Dados.Usuario.XOUsuario").NomeDeUsuario = Application.User
+ Application.GetObject("Dados.Usuario.XOUsuario").NomeCompletoDoUsuario = Application.GetFullUserName()
+ Application.GetObject("Dados.Usuario.XOUsuario").NomeDoComputador = GetComputerName()
+ Application.GetObject("Dados.Usuario.XOUsuario").DataHora = GetLocalTimeUTC()
+End Sub
+```
