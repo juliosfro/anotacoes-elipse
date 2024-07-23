@@ -142,9 +142,23 @@ em tempo de execução.
 
 ## Criacao do login e acesso as informacoes do usuario
 
+Ao iniciar ou reiniciar o Viewer sera solicitado usuario e senha:
+
 ```vbscript
-Sub TelaMenus_OnPreShow(Arg)
- Application.Login()	
+Sub Viewer_OnStartRunning()
+ If Application.Login() then
+  MsgBox "Login do usuário " & user & " realizado com sucesso!", vbinformation, "Informação de Login"
+ Else
+  MsgBox "Login Incorreto!", vbexclamation, "Informação de Login"
+  Application.Exit()
+ End If
+End Sub
+```
+
+Se o login for bem sucedido o objeto usuario sera populado com as informacoes dele mesmo:
+
+```vbscript
+Sub Viewer_OnLogin()
  Application.GetObject("Dados.Usuario.XOUsuario").NomeDeUsuario = Application.User
  Application.GetObject("Dados.Usuario.XOUsuario").NomeCompletoDoUsuario = Application.GetFullUserName()
  Application.GetObject("Dados.Usuario.XOUsuario").NomeDoComputador = GetComputerName()
