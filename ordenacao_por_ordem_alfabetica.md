@@ -6,7 +6,7 @@ Sub CmbFuncionarios_OnStartRunning()
 
     For index1 = LBound(namesArray) To UBound(namesArray) - 1
         For index2 = index1 + 1 To UBound(namesArray)
-            If namesArray(index1) > namesArray(index2) Then
+            If Trim(LCase(namesArray(index1))) > Trim(LCase(namesArray(index2))) Then
                 tempName = namesArray(index1)
                 namesArray(index1) = namesArray(index2)
                 namesArray(index2) = tempName
