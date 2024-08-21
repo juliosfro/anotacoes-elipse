@@ -1,29 +1,21 @@
 ```vbscript
 Sub CmbFuncionarios_OnStartRunning()
-  Dim namesArray, index1, index2, tempName
-    Dim arrayLength
+    Dim namesArray, index1, index2, tempName
 
-    ' Define o array de nomes
     namesArray = Array("Julio", "Guedin", "Vinicius", "Ismael")
-    
-    ' Obtém o comprimento do array
-    arrayLength = UBound(namesArray)
-    
-    ' Ordena o array usando Bubble Sort
-    For index1 = arrayLength - 1 To 0 Step -1
-        For index2 = 0 To index1 - 1
-            If LCase(namesArray(index2)) > LCase(namesArray(index2 + 1)) Then
-                ' Troca os elementos
-                tempName = namesArray(index2)
-                namesArray(index2) = namesArray(index2 + 1)
-                namesArray(index2 + 1) = tempName
+
+    For index1 = LBound(namesArray) To UBound(namesArray) - 1
+        For index2 = index1 + 1 To UBound(namesArray)
+            If namesArray(index1) > namesArray(index2) Then
+                tempName = namesArray(index1)
+                namesArray(index1) = namesArray(index2)
+                namesArray(index2) = tempName
             End If
         Next
     Next
 
-    ' Adiciona os itens ordenados ao ComboBox
-    For index1 = 0 To arrayLength
+    For index1 = LBound(namesArray) To UBound(namesArray)
         AddItem namesArray(index1)
-    Next	
+    Next
 End Sub
 ```
