@@ -17,20 +17,20 @@ macro_command main()
 // Define variavel tela inicial sendo a janela numero 10
 short numeroTelaInicial = 10
 
-// classe atual - qualquer valor diferente de 0 significa que um usuário está logado
-short classeUsuarioLogado = 0
+// Qualquer valor diferente de 0 significa que um usuário está logado
+short usuarioLogado = 0
 
-// este é o número da janela atual
+// Este é o número da janela atual
 short numeroJanelaAtual = 0
 
-// obtém o valor da classe atual
-GetData(classeUsuarioLogado, "Local HMI", LW, 9222, 1)
+// Obtém o número do status do usuario
+GetData(usuarioLogado, "Local HMI", LW, 9222, 1)
 
-// obtém o número da janela atual
+// Obtém o número da janela atual
 GetData(numeroJanelaAtual, "Local HMI", LW, 9050, 1) 
 
-// se o usuário estiver desconectado e a janela atual não for a tela inicial então...
-if classeUsuarioLogado == 0 and numeroJanelaAtual <> numeroTelaInicial then 
+// Se o usuário estiver desconectado e a janela atual não for a tela inicial então...
+if usuarioLogado == 0 and numeroJanelaAtual <> numeroTelaInicial then 
   // Chama a tela inicial
   SetData(numeroTelaInicial, "Local HMI", LW, 0, 1) 
 end if
