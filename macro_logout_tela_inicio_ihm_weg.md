@@ -18,10 +18,10 @@ macro_command main()
 short telaInicial = 10
 
 // classe atual - qualquer valor diferente de 0 significa que um usuário está logado
-short classeAtual
+short classeAtual = 0
 
 // este é o número da janela atual
-short numeroJanelaAtual
+short numeroJanelaAtual = 0
 
 // obtém o valor da classe atual
 GetData(classeAtual, "Local HMI", LW, 9222, 1)
@@ -32,8 +32,7 @@ GetData(numeroJanelaAtual, "Local HMI", LW, 9050, 1)
 // se o usuário estiver desconectado e a janela atual não for a tela inicial então...
 if classeAtual == 0 and numeroJanelaAtual <> telaInicial then 
   // Chama a tela inicial
-  SetData(telaInicial, "Local HMI", LW, 0, 1)	
-else 
+  SetData(telaInicial, "Local HMI", LW, 0, 1) 
 end if
 
 end macro_command
