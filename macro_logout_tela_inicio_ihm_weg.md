@@ -15,24 +15,24 @@ Habilitar -> Execute one time when HMI starts
 macro_command main()
 
 // Define variavel tela inicial sendo a janela numero 10
-short telaInicial = 10
+short numeroTelaInicial = 10
 
 // classe atual - qualquer valor diferente de 0 significa que um usuário está logado
-short classeAtual = 0
+short classeUsuarioLogado = 0
 
 // este é o número da janela atual
 short numeroJanelaAtual = 0
 
 // obtém o valor da classe atual
-GetData(classeAtual, "Local HMI", LW, 9222, 1)
+GetData(classeUsuarioLogado, "Local HMI", LW, 9222, 1)
 
 // obtém o número da janela atual
 GetData(numeroJanelaAtual, "Local HMI", LW, 9050, 1) 
 
 // se o usuário estiver desconectado e a janela atual não for a tela inicial então...
-if classeAtual == 0 and numeroJanelaAtual <> telaInicial then 
+if classeUsuarioLogado == 0 and numeroJanelaAtual <> numeroTelaInicial then 
   // Chama a tela inicial
-  SetData(telaInicial, "Local HMI", LW, 0, 1) 
+  SetData(numeroTelaInicial, "Local HMI", LW, 0, 1) 
 end if
 
 end macro_command
